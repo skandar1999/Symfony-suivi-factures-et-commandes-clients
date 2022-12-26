@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Pc index{% endblock %}
+
+{% block body %}
+    <h1>Pc index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Qtec</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for pc in pcs %}
+            <tr>
+                <td>{{ pc.id }}</td>
+                <td>{{ pc.qtec }}</td>
+                <td>
+                    <a href="{{ path('app_pc_show', {'id': pc.id}) }}">show</a>
+                    <a href="{{ path('app_pc_edit', {'id': pc.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="3">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_pc_new') }}">Create new</a>
+{% endblock %}

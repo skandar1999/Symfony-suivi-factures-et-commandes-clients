@@ -1,0 +1,30 @@
+{{ form_start(form) }}
+<div class="col-sm-6 text-black">
+
+<div >
+<label for="client_nom" class="form-label">
+{{ form_label(form.nomc) }}
+</label>
+{{ form_widget(form.nomc, {'attr':{'class':'form-control'}}) }}
+</div>
+
+<div>
+<label for="client_credit" class="form-label">
+{{ form_label(form.creditc) }}
+</label>
+{{ form_widget(form.creditc, {'attr':{'class':'form-control'}}) }}
+</div>
+
+<div>
+<label for="client-adr" class="form-label">
+{{ form_label(form.adrc) }}
+</label>
+{{ form_widget(form.adrc, {'attr':{'class':'form-control'}}) }}
+</div>
+
+<div>&nbsp;</div>
+<div>
+<button class="btn btn-primary">{{ button_label|default('Save') }}</button>
+</div>
+</div>
+{{ form_end(form) }}

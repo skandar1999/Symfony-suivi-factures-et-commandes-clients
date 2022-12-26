@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+ {% block title %}findMostPopularVilles{% endblock %}
+
+{% block body %}
+
+<h1> nombre des clients selon leur ville </h1>
+<table class="table table-striped">
+<tr>
+<th> Ville </th>
+<th>Nombre de client par ville </th>
+</tr>
+{% for client in clients %}
+<tr><td>{{ client.adrc }}</td><td>{{ client.howMany}}</td></tr>
+{% endfor %}
+
+</table>
+{% endblock %}

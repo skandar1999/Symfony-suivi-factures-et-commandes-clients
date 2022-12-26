@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+ {% block title %}Most popular produits{% endblock %}
+
+{% block body %}
+
+<h1>les clients qui ont passé des commandes durant une période donnée </h1>
+<table class="table table-striped">
+<tr>
+<th>Produit </th>
+<th>Nombre de client commandé ce produit</th>
+</tr>
+{% for commande in commandes %}
+<tr><td>{{ commande.datc }}</td><td>{{ commande.codc_id}}</td></tr>
+{% endfor %}
+
+</table>
+{% endblock %}

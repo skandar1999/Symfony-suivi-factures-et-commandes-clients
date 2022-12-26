@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+ {% block title %}Most popular produits{% endblock %}
+
+{% block body %}
+
+<h1>Liste des clients selen leur commande de produit </h1>
+<table class="table table-striped">
+<tr>
+<th>Produit </th>
+<th>Nombre de client commandé ce produit</th>
+</tr>
+{% for produit in produits %}
+<tr><td>{{ produit.lib }}</td><td>{{ produit.howMany}}</td></tr>
+{% endfor %}
+
+</table>
+{% endblock %}

@@ -1,0 +1,20 @@
+{{ form_start(form) }}
+<div>
+<label for="DatC" class="datetime-local">
+{{ form_label(form.datc) }}
+</label>
+{{ form_widget(form.datc, {'attr':{'class':'form-control'}}) }}
+</div>
+<div>
+<label for="client_CreditC" class="form-label">
+{{ form_label(form.codc) }}
+</label>
+{{ form_widget(form.codc, {'attr':{'class':'form-control'}}) }}
+</div>
+
+<div></div>
+<br>
+<div><div>&nbsp;</div>
+
+<button class="btn btn-primary">{{ button_label|default('Save') }}</button>
+</div>

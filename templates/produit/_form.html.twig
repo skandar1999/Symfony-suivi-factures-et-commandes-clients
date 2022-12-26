@@ -1,0 +1,37 @@
+{{ form_start(form) }}
+<div class="col-sm-6 text-black">
+
+<div >
+<label for="student_name" class="form-label">
+{{ form_label(form.lib) }}
+</label>
+{{ form_widget(form.lib, {'attr':{'class':'form-control'}}) }}
+</div>
+
+<div>
+<label for="student_surname" class="form-label">
+{{ form_label(form.pu) }}
+</label>
+{{ form_widget(form.pu, {'attr':{'class':'form-control'}}) }}
+</div>
+
+<div>
+<label for="student_surname" class="form-label">
+{{ form_label(form.qtes) }}
+</label>
+{{ form_widget(form.qtes, {'attr':{'class':'form-control'}}) }}
+</div>
+
+<div>
+<label for="student_surname" class="form-label">
+{{ form_label(form.seuil) }}
+</label>
+{{ form_widget(form.seuil, {'attr':{'class':'form-control'}}) }}
+</div>
+
+<div>&nbsp;</div>
+<div>
+<button class="btn btn-primary">{{ button_label|default('Save') }}</button>
+</div>
+</div>
+{{ form_end(form) }}

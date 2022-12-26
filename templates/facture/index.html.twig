@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Facture index{% endblock %}
+
+{% block body %}
+    <h1>Facture index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Datf</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for facture in factures %}
+            <tr>
+                <td>{{ facture.id }}</td>
+                <td>{{ facture.datf ? facture.datf|date('Y-m-d H:i:s') : '' }}</td>
+                <td>
+                    <a  class="btn btn-success" href="{{ path('app_facture_show', {'id': facture.id}) }}">show</a>
+                    <a  class="btn btn-info" href="{{ path('app_facture_edit', {'id': facture.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="3">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a  class="btn btn-success btn-lg btn-block" href="{{ path('app_facture_new') }}">Create new</a>
+{% endblock %}
